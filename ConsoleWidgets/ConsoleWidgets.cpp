@@ -31,7 +31,7 @@ namespace ConsoleWidgets {
         context->SetWindow(initscr());
         cbreak();
         noecho();
-        keypad();
+        keypad(context->GetWindow(), true);
         return context;
     }
 
