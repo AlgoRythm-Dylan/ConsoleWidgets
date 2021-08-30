@@ -2,10 +2,11 @@
 #define CW_COORD_H
 
 #include <iostream>
+#include "ConsoleWidgets.h"
 
 namespace ConsoleWidgets {
     template<class T>
-    class Coord {
+    class Coord : ConsoleWidgetsObject {
     public:
         T x, y;
         Coord() { }
@@ -13,11 +14,14 @@ namespace ConsoleWidgets {
             this->x = x;
             this->y = y;
         }
+        std::string ToString() override {
+            return "ConsoleWidgets::Coord { x : " + std::to_string(x) + ", y : " + std::to_string(y) + " }";
+        }
     };
 
     template<class T>
-    std::ostream& operator <<(std::ostream &stream, const Coord<T> &coord){
-        return stream << "ConsoleWidgets::Coord { x : " << coord.x << ", y : " << coord.y << " }";
+    std::ostream& operator <<(std::ostream &stream, Coord<T> &coord){
+        return stream << coord.ToString();
     }
 
 };

@@ -1,5 +1,6 @@
 #include <ncurses.h>
 #include <time.h>
+#include <string>
 
 #ifndef CONSOLE_WIDGETS_H
 #define CONSOLE_WIDGETS_H
@@ -12,7 +13,12 @@
 
 namespace ConsoleWidgets {
 
-    class ConsoleWidgetsContext {
+    class ConsoleWidgetsObject {
+    public:
+        virtual std::string ToString() { return "<object>"; };
+    };
+
+    class ConsoleWidgetsContext : ConsoleWidgetsObject {
     public:
         ConsoleWidgetsContext();
         void Use();

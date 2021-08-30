@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-g++ -o cwtest ConsoleWidgets/*.cpp ConsoleWidgets/*.h test.cpp -lncurses
+g++ -std=c++17 -o cwtest ConsoleWidgets/*.cpp ConsoleWidgets/*.h test.cpp -lncurses

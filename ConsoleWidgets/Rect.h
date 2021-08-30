@@ -2,10 +2,11 @@
 #define CW_RECT_H
 
 #include <iostream>
+#include "ConsoleWidgets.h"
 
 namespace ConsoleWidgets {
     template<class T>
-    class Rect {
+    class Rect : ConsoleWidgetsObject {
     public:
         T x, y, width, height;
         Rect() { }
@@ -15,12 +16,15 @@ namespace ConsoleWidgets {
             this->width = width;
             this->height = height;
         }
+        std::string ToString() override {
+            return "ConsoleWidgets::Rect { x : " + std::to_string(x) + ", y : " + std::to_string(y)
+                    + ", width : " + std::to_string(width) + ", height : " + std::to_string(height) + " }";
+        }
     };
 
     template<class T>
-    std::ostream& operator <<(std::ostream &stream, const Rect<T> &rect){
-        return stream << "ConsoleWidgets::Rect { x : " << rect.x << ", y : " << rect.y
-            << ", width : " << rect.width << ", height : " << rect.height << " }";
+    std::ostream& operator <<(std::ostream &stream, Rect<T> &rect){
+        return stream << rect.ToString();
     }
 
 };
