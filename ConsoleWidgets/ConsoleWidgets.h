@@ -1,4 +1,5 @@
 #include <ncurses.h>
+#include <time.h>
 
 #ifndef CONSOLE_WIDGETS_H
 #define CONSOLE_WIDGETS_H
