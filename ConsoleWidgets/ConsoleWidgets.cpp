@@ -2,32 +2,32 @@
 
 namespace ConsoleWidgets {
 
-    ConsoleWidgetsContext::ConsoleWidgetsContext(){
+    Context::ConsoleWidgetsContext(){
         curses_window = nullptr;
     }
 
-    void ConsoleWidgetsContext::Use(){
+    void Context::Use(){
 
     }
 
-    void ConsoleWidgetsContext::Restore(){
+    void Context::Restore(){
         endwin();
     }
 
-    void ConsoleWidgetsContext::Update(){
+    void Context::Update(){
         refresh();
     }
 
-    void ConsoleWidgetsContext::SetWindow(WINDOW *window){
+    void Context::SetWindow(WINDOW *window){
         curses_window = window;
     }
 
-    WINDOW* ConsoleWidgetsContext::GetWindow(){
+    WINDOW* Context::GetWindow(){
         return curses_window;
     }
 
-    ConsoleWidgetsContext* Init(){
-        ConsoleWidgetsContext *context = new ConsoleWidgetsContext();
+    Context* Init(){
+        Context *context = new Context();
         context->SetWindow(initscr());
         cbreak();
         noecho();

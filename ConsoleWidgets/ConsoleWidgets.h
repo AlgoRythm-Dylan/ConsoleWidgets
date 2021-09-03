@@ -18,9 +18,9 @@ namespace ConsoleWidgets {
         virtual std::string ToString() { return "<object>"; };
     };
 
-    class ConsoleWidgetsContext : ConsoleWidgetsObject {
+    class Context : ConsoleWidgetsObject {
     public:
-        ConsoleWidgetsContext();
+        Context();
         void Use();
         void Restore();
         void Update();
@@ -31,7 +31,7 @@ namespace ConsoleWidgets {
         WINDOW *curses_window;
     };
 
-    ConsoleWidgetsContext* Init();
+    Context* Init();
     void Sleep(long);
 
 };

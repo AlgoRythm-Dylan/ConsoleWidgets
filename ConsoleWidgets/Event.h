@@ -1,3 +1,6 @@
+#ifndef CW_EVENT_H
+#define CW_EVENT_H
+
 #include "ConsoleWidgets.h"
 #include <map>
 #include <vector>
@@ -8,24 +11,26 @@ namespace ConsoleWidgets {
     class Event : ConsoleWidgetsObject {
     private:
         bool isCancelled;
-    }
+    };
 
     class EventHandler : ConsoleWidgetsObject {
     private:
         std::function<void(Event&)> handler;
     public:
-        std::function GetHandler();
-        void SetHandler(std::function);
-    }
+        std::function<void(Event&)> GetHandler();
+        void SetHandler(std::function<void(Event&)>);
+    };
 
     class EventGroup : ConsoleWidgetsObject {
     private:
         std::string eventName;
         std::vector<EventHandler> handlers;
-    }
+    };
 
     class EventEmitter : ConsoleWidgetsObject {
     private:
         std::map<std::string, EventGroup> groups;
-    }
+    };
 };
+
+#endif

@@ -1,4 +1,4 @@
-#include "Event.cpp"
+#include "Event.h"
 
 namespace ConsoleWidgets {
 

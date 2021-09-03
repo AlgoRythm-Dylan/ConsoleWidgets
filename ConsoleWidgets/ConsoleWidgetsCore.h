@@ -1,0 +1,7 @@
+#include "ConsoleWidgets.h"
+#include "Rect.h"
+#include "Coord.h"
+#include "Event.h"
+#include "Widget.h"
+#include "Unit.h"
+#include "Navigation.h"
