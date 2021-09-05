@@ -1,7 +1,3 @@
-#include <ncurses.h>
-#include <time.h>
-#include <string>
-
 #ifndef CONSOLE_WIDGETS_H
 #define CONSOLE_WIDGETS_H
 
@@ -11,6 +7,11 @@
 #define CONSOLE_WIDGETS_NIX
 #endif
 
+#include <ncurses.h>
+#include <time.h>
+#include <string>
+#include <iostream>
+
 namespace ConsoleWidgets {
 
     class ConsoleWidgetsObject {
@@ -18,7 +19,11 @@ namespace ConsoleWidgets {
         virtual std::string ToString() { return "<object>"; };
     };
 
-    class Context : ConsoleWidgetsObject {
+    inline std::ostream& operator <<(std::ostream &stream, ConsoleWidgetsObject &obj){
+        return stream << obj.ToString();
+    }
+
+    class Context : public ConsoleWidgetsObject {
     public:
         Context();
         void Use();

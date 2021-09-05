@@ -19,11 +19,6 @@ namespace ConsoleWidgets {
         }
     };
 
-    template<class T>
-    std::ostream& operator <<(std::ostream &stream, Coord<T> &coord){
-        return stream << coord.ToString();
-    }
-
 };
 
 #endif

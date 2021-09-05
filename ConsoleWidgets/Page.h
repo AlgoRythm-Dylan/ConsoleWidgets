@@ -9,7 +9,7 @@ namespace ConsoleWidgets {
 
     class NavigationEvent;
 
-    class Page : ConsoleWidgetsObject {
+    class Page : public ConsoleWidgetsObject {
     private:
         Widget *root;
         Context *context;

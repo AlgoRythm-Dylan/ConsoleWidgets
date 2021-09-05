@@ -18,11 +18,11 @@ namespace ConsoleWidgets {
         Forwards
     };
 
-    class NavigationEvent : Event {
+    class NavigationEvent : public Event {
 
     };
 
-    class NavigationManager : ConsoleWidgetsObject {
+    class NavigationManager : public ConsoleWidgetsObject {
     private:
         std::vector<Page*> pageStack;
         int index;

@@ -12,7 +12,7 @@ namespace ConsoleWidgets {
     // Forwards declare so we can have self referential class
     class Widget;
 
-    class Widget : ConsoleWidgetsObject {
+    class Widget : public ConsoleWidgetsObject {
     private:
         Widget *parent;
         std::vector<Widget> children;

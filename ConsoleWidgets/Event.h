@@ -8,7 +8,7 @@
 
 namespace ConsoleWidgets {
 
-    class Event : ConsoleWidgetsObject {
+    class Event : public ConsoleWidgetsObject {
     private:
         bool isCancelled;
     };

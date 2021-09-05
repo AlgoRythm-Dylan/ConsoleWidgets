@@ -9,12 +9,12 @@ namespace ConsoleWidgets {
     // Returns a "real" calculation based on the bounds provided,
     // Which can then be used by a terminal rasterizer to convert
     // into text cell values appropriately
-    class Unit : ConsoleWidgetsObject {
+    class Unit : public ConsoleWidgetsObject {
     public:
         virtual double Evaluate(double bounds) = 0;
     };
 
-    class PixelUnit : Unit {
+    class PixelUnit : public Unit {
     private:
         double pixelValue;
     public:
@@ -26,7 +26,7 @@ namespace ConsoleWidgets {
         double GetPixels(double);
     };
 
-    class PercentageUnit : Unit {
+    class PercentageUnit : public Unit {
     private:
         double percentage;
     public:

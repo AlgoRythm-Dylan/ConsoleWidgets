@@ -5,7 +5,7 @@
 
 namespace ConsoleWidgets {
 
-    class CharacterCell : ConsoleWidgetsObject {
+    class CharacterCell : public ConsoleWidgetsObject {
     private:
         int calcAttrs;
         bool isBold;

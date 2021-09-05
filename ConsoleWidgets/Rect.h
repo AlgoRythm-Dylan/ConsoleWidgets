@@ -6,7 +6,7 @@
 
 namespace ConsoleWidgets {
     template<class T>
-    class Rect : ConsoleWidgetsObject {
+    class Rect : public ConsoleWidgetsObject {
     public:
         T x, y, width, height;
         Rect() { }
@@ -21,11 +21,6 @@ namespace ConsoleWidgets {
                     + ", width : " + std::to_string(width) + ", height : " + std::to_string(height) + " }";
         }
     };
-
-    template<class T>
-    std::ostream& operator <<(std::ostream &stream, Rect<T> &rect){
-        return stream << rect.ToString();
-    }
 
 };
 
