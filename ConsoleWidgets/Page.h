@@ -2,10 +2,12 @@
 #define CW_PAGE_H
 
 #include "ConsoleWidgets.h"
-#include "Navigation.h"
 #include "Widget.h"
+#include "Navigation.h"
 
 namespace ConsoleWidgets {
+
+    class NavigationEvent;
 
     class Page : ConsoleWidgetsObject {
     private:
@@ -15,9 +17,9 @@ namespace ConsoleWidgets {
         Page();
         Page(Context*);
         Page(Context*, Widget*);
-        Widget* SetRoot();
+        Widget* SetRoot(Widget*);
         Widget* GetRoot();
-        Context* SetContext();
+        Context* SetContext(Context*);
         Context* GetContext();
         void OnNavigate(NavigationEvent&);
     };

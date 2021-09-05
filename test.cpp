@@ -4,6 +4,6 @@ using namespace ConsoleWidgets;
 
 int main(){
     Context *ctx = Init();
-
+    ctx->Restore();
     return 0;
 }

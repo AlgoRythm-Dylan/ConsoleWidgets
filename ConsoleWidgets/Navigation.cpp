@@ -1,9 +1,11 @@
 #include "Navigation.h"
 
+#include <vector>
+
 namespace ConsoleWidgets {
 
     NavigationManager::NavigationManager(){
-        pageStack = vector<Page*>();
+        pageStack = std::vector<Page*>();
         index = -1;
     }
 

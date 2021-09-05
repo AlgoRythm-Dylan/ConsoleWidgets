@@ -2,11 +2,15 @@
 #define CW_NAVIGATION_H
 
 #include "ConsoleWidgets.h"
-#include "Page.h"
+#include "Widget.h"
 #include "Event.h"
+#include "Page.h"
 #include <vector>
 
 namespace ConsoleWidgets {
+
+    // Forwards declare Page because Page.h requires Navigation.h for NavigationEvent
+    class Page;
 
     enum NavigationType {
         Direct,

@@ -1,7 +1,10 @@
 #ifndef CW_WIDGET_H
 #define CW_WIDGET_H
 
-#include "ConsoleWidgetsCore.h"
+#include "ConsoleWidgets.h"
+#include "Rect.h"
+#include "Coord.h"
+
 #include <vector>
 
 namespace ConsoleWidgets {
