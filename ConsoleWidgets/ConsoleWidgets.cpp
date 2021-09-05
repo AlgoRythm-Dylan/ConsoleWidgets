@@ -2,7 +2,7 @@
 
 namespace ConsoleWidgets {
 
-    Context::ConsoleWidgetsContext(){
+    Context::Context(){
         curses_window = nullptr;
     }
 

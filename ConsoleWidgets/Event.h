@@ -13,24 +13,6 @@ namespace ConsoleWidgets {
         bool isCancelled;
     };
 
-    class EventHandler : ConsoleWidgetsObject {
-    private:
-        std::function<void(Event&)> handler;
-    public:
-        std::function<void(Event&)> GetHandler();
-        void SetHandler(std::function<void(Event&)>);
-    };
-
-    class EventGroup : ConsoleWidgetsObject {
-    private:
-        std::string eventName;
-        std::vector<EventHandler> handlers;
-    };
-
-    class EventEmitter : ConsoleWidgetsObject {
-    private:
-        std::map<std::string, EventGroup> groups;
-    };
 };
 
 #endif

@@ -8,12 +8,13 @@ namespace ConsoleWidgets {
     class CharacterCell : ConsoleWidgetsObject {
     private:
         int calcAttrs;
+        bool isBold;
     public:
         CharacterCell();
-        Reset();
-        SetBold();
-        GetBold();
-        CalculateAttrs();
+        void Reset();
+        void SetBold(bool);
+        bool GetBold();
+        int CalculateAttrs();
     };
 
 };
