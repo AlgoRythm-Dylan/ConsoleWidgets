@@ -20,7 +20,7 @@ namespace ConsoleWidgets {
     };
 
     inline std::ostream& operator <<(std::ostream &stream, ConsoleWidgetsObject &obj){
-        return stream << obj.ToString();
+        return stream << "[ addr:" << std::to_string((uintptr_t)((void*)&obj)) << " ] " << obj.ToString();
     }
 
     class Context : public ConsoleWidgetsObject {
