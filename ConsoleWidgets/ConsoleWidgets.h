@@ -14,13 +14,15 @@
 
 namespace ConsoleWidgets {
 
+    static const std::string CW_NAME = "CursesWidgets";
+
     class ConsoleWidgetsObject {
     public:
         virtual std::string ToString() { return "<object>"; };
     };
 
     inline std::ostream& operator <<(std::ostream &stream, ConsoleWidgetsObject &obj){
-        return stream << "[ addr:" << std::to_string((uintptr_t)((void*)&obj)) << " ] " << obj.ToString();
+        return stream << "[ 0x" << std::hex << (uintptr_t)((void*)&obj) << " ] " << obj.ToString();
     }
 
     class Context : public ConsoleWidgetsObject {

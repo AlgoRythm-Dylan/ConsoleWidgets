@@ -15,7 +15,7 @@ namespace ConsoleWidgets {
             this->y = y;
         }
         std::string ToString() override {
-            return "ConsoleWidgets::Coord { x : " + std::to_string(x) + ", y : " + std::to_string(y) + " }";
+            return CW_NAME + "::Coord { x : " + std::to_string(x) + ", y : " + std::to_string(y) + " }";
         }
     };
 

@@ -17,7 +17,7 @@ namespace ConsoleWidgets {
             this->height = height;
         }
         std::string ToString() override {
-            return "ConsoleWidgets::Rect { x : " + std::to_string(x) + ", y : " + std::to_string(y)
+            return CW_NAME + "::Rect { x : " + std::to_string(x) + ", y : " + std::to_string(y)
                     + ", width : " + std::to_string(width) + ", height : " + std::to_string(height) + " }";
         }
     };

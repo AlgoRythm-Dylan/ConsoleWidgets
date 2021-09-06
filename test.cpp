@@ -4,7 +4,7 @@
 using namespace ConsoleWidgets;
 
 int main(){
-    Rect<double> dRect = Rect<double>(2.0, 4, 5, 6);
-    std::cout << dRect << std::endl;
+    ConsoleWidgetsObject obj = ConsoleWidgetsObject();
+    std::cout << obj << std::endl;
     return 0;
 }
